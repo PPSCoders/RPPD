@@ -1,0 +1,1 @@
+pg_ctl -D "C:\Program Files\PostgreSQL\11\data" start 
