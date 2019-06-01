@@ -1,196 +1,62 @@
 <template>
-  <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <button class="navbar-toggler navbar-toggler-right"
-        type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacts">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#faq">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <button type="button" class="btn btn-primary">Login</button>
-            </li>
-            <li class="nav-item"></li>
-            </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Image and Search Bar -->
-    <div class="container_searchimg">
-        <img style="width: 100%" src= "../assets/WangdueField.jpg">
-        <div class="centered_search row justify-content-center" id="search" style="opacity: 0.8">
-          <div class="col-12 col-md-10 col-lg-8">
-            <form class="card card-sm" action="search.html">
-                <div class="card-body row no-gutters align-items-center">
-                    <input type='hidden' name="mockSet" value="true">
-                    <div class="col-auto">
-                        <i class="fas fa-search h4 text-body"> <img src="https://img.icons8.com/color/48/000000/insect.png"></i>
-                    </div>
-                    <!--end of col-->
-                    <div class="col">
-                        <input class="form-control form-control-lg form-control-borderless"
-                        type="search"
-                        placeholder="Search pests or hosts">
-                    </div>
-                    <!--end of col-->
-                    <div class="col-auto">
-                        <button class="btn btn-lg btn-success" type="submit">Search</button>
-                    </div>
-                    <!--end of col-->
-                </div>
-            </form>
-          </div>
-        </div>
-    </div>
-    <div class="container bg-light"
-    style="padding-left:50px;padding-right:50px;padding-top:30px">
-      <h1 class="my-4 text-secondary">
-        Welcome to the Regulated Plants and Pests Database
-      </h1>
-      <br>
-      <!-- Side Bar and navigation for different pests categories -->
-      <div class="row ">
-        <div class="col-sm-4">
-          <ul class="nav nav-pills flex-column ">
-              <li class="sidebar-brand h2 text-primary ">
-                Pests and Diseases
-              </li>
-                <li>
-                <img src="https://img.icons8.com/color/48/000000/forest.png">
-                <a href="#overall" data-toggle="collapse" aria expanded="false">
-                  Forestry Pests
-                </a>
-                      <ul id="overall" class="nav-second collapse ">
-                          <li><a href="#">Pest 1</a></li>
-                          <li><a href="#">Pest 2</a></li>
-                      </ul>
-                </li>
-              <li>
-                <img src="https://img.icons8.com/color/48/000000/apple.png">
-                <a href="#dashboard" data-toggle="collapse" aria expanded="false">
-                  Horticultural Pests
-                </a>
-                      <ul id="dashboard" class="nav-second collapse">
-                          <li><a href="#">Pest 1</a></li>
-                          <li><a href="#">Pest 2</a></li>
-                      </ul>
-              </li>
-              <li>
-                  <img src="https://img.icons8.com/color/48/000000/corn.png">
-                  <a href="#service" data-toggle="collapse"
-                    aria expanded="false">Agricultural Pests</a>
-                      <ul id="service" class="nav-second collapse">
-                          <li><a href="#">Pest 1</a></li>
-                          <li><a href="#">Pest 2</a></li>
-                      </ul>
-              </li>
-          </ul>
-        </div>
-        <!-- Content Area and about section -->
-        <div class="col-sm-8" style="padding:25px;background-color: #e1e1e1" id="about">
-          <div class="h2">Qurantine Pests and Diseases</div><br>
-          <div class="h5 ">Objectives and Scope of Plant Qurantine Pests Database (PQPD)</div>
-          <div >
-              <p>The Biosecurity Policy of the Kingdom of Bhutan 20 I 0 designates BAFRA as the National Competent Authority to coordinate all the biosecurity related activities in Bhutan. And for strengthening the plant biosecurity measures in the country, one essentialcompetent is to maintain the Plant Quarantine Pest Database. Such database not only serves the purpose for information exchange among various stakeholders, but also to assist movement of plants and planting materials between Bhutan and outside world. It will help to enhance trade in plant and planting materials and make it safe for agricultural development mainly by ensuring that serious pests, diseases and weeds are not introduced to pest free areas, and also export such problems to other countries are prevented.  The primary aim of this database is to assist Plant Quarantine Inspectors with pests, diseases, and weeds information to improve their knowledge and make them more effective and efficient to implement tasks of plants and planting materials inspection at the point of entry and in the areas where internal quarantine measures are implemented. In addition, it is also expected to serve as a data repository wherein hosts of emerging or potential plant quarantine pests, diseases and weeds information can be updated and made available as and when necessary by the National Plant Protection Organization.</p>
-
-              <p>Bhutan has been witnessing increased trade volume of plants and plant materials over the years. Such trade has associated risks with it as they may serve as a pathway for introduction and spread of exotic plant pests and diseases. As per the definition of the International Plant Protection Convention (IPPC),a quarantine pest is a pest of potential economic importance to the area endangered thereby and not yet present there, or present but not widely distributed and being officially controlled. The Plant Quarantine Pest Database contains list of pest, disease or weed mostly not present in the country and a few pests that are under official regulation in the country which are of quarantine importance.PQPDis the basic online database management system maintained by Bhutan Agriculture and Food Regulatory Authority (BAFRA) under Ministry of Agriculture and Forests. </p> 
-            
-          </div>
-        </div>
-      </div>
-      <!-- /.row -->
-      <br><br><br>
-      <!-- How to use Search Section Section -->
-      <div class="row" id="faq">
-        <div class="col-lg-6">
-          <h2>How to use the search tool</h2>
-          <p>The search tool lets you enter the name of the pests, diease or the name of the hosts that it infects. It displays the most relevant results. On selecting one of the options, it shows information related to: </p>
-          <ul>
-            <li>Name / Identity of the pests</li>
-            <li>List of host plants associated with it</li>
-            <li>Description of the Symptoms</li>
-            <li>Means of Spread</li>
-            <li>Phytosanitary risks</li>
-            <li>Phytosanitary measures</li>
-            <li>Photos fo the pests</li>
-            <li>Distribution across the country and maps</li>
-          </ul>
-        <p>For more advanced search options <a href="search.html">go here</a> </p>
-        </div>
-        <div class="col-lg-6">
-          <img class="img-fluid rounded" src="../assets/pests.jpg" alt="pests">
-        </div>
-      </div>
-    </div>
-    <footer class="py-5 bg-dark" id="contacts">
-      <div class="container text-white">
-        <div class="row">
-            <div class="footer-col col-md-4">
-                <h3>Toll Free Number</h3>
-                <hr>
-                <span class="glyphicon glyphicon-phone fa-2x"></span>
-                <span class="tollfree">1555</span><br>
-                <h5>Connect us</h5>
-                <ul class="list-inline">
-                <li>
-                    <a href="#" class="btn-social btn-outline"><i class="fa fa-facebook-square fa-2x"></i></a>
-                </li>
-              
-                <li>
-                    <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter fa-2x"></i></a>
-                </li>   
-            </ul>
-            </div>
-            <div class="footer-col col-md-4">
-              <h3>Quick Links </h3>
-              <hr>
-              <ul>
-                <li><a href="http://www.bafra.gov.bt/web-links">Web Links</a></li>
-                <li><a href="http://www.bafra.gov.bt/service-listing">Services</a></li>
-                <li><a href="http://www.bafra.gov.bt/newsupdates">News &amp; Updates</a></li>
-                <li><a href="http://www.bafra.gov.bt/notifications">Notifications</a></li>
-                <li><a href="http://202.144.151.60/" target="_blank">BBSS</a></li>
-              </ul>
-            </div>
-          <div class="footer-col col-md-4">
-              <h3>Contact us</h3>
-              <hr>
-            <address>
-            Bhutan Agriculture and Food Regulatory Authority,
-            Ministry of Agriculture and Forests,
-              Post Box: 1071, Thimphu, Bhutan,                        
-              Tel: +975-02-327031/325790
-              Fax: +975-02-327032/335540
-            </address>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; BAFRA 2019</p>
-      </div>
-    </footer>
-  </div> 
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      fixed
+      app
+    >
+      <v-list dense>
+        <v-list-tile @click="">
+          <v-list-tile-action>
+            <v-icon>home</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Home</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile @click="">
+          <v-list-tile-action>
+            <v-icon>contact_mail</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title>Contact</v-list-tile-title>
+          </v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar color="green" dark fixed app>
+      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+      <v-toolbar-title>Application</v-toolbar-title>
+    </v-toolbar>
+    <v-content>
+      <v-container fluid fill-height>
+        <v-layout
+          justify-center
+          align-center>
+          <v-flex text-xs-center>
+            <p>testing</p>
+             <v-img src="@/assets/Blogo.png"
+                alt="logo"
+                max-width="50"
+                max-height="50"
+              ></v-img>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
+    <v-footer color="grey" app justify-center>
+      <span class="white--text">&copy; 2017</span>
+    </v-footer>
+  </v-app>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-    };
-  },
-};
+  export default {
+    data: () => ({
+      drawer: false
+    }),
+    props: {
+      source: String
+    }
+  }
 </script>
