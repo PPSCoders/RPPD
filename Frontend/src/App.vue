@@ -1,16 +1,17 @@
 <template>
-  <div>
+  <v-app>
+    <navbar/>
+    <br><br><br><br>
     <router-view/>
-  </div>
+  </v-app>
 </template>
 
 <script>
-import index from '@/components/index.vue';
-
+import navbar from '@/components/navbar.vue';
 export default {
   name: 'App',
   components: {
-    index,
+    navbar,
   },
 };
 </script>

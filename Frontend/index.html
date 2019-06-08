@@ -4,11 +4,71 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
-    <title>frontend</title>
+    <link href='/static/custom.css' rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+    <title>RPPD</title>
   </head>
   <body>
+    
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- <img src="/static/field.jpg"> -->
+    <script src="/static/custom.js"></script>
 
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([90.485558, 27.450556]),
+          zoom: 8.2
+        })
+      });
+
+    var vectorSource = new ol.source.Vector({});
+    var places = [
+      [89.3938, 26.8603],
+      [90.4927, 26.8725],
+      [89.8797, 27.5921],
+      [91.5039, 26.8036],
+      [91.5523, 27.3325],
+      [89.4164, 27.4287],
+    ];
+
+    for (var i = 0; i < places.length; i++) {
+      var marker = new ol.Feature({
+        geometry: new ol.geom.Point(
+          ol.proj.fromLonLat([places[i][0], places[i][1]])
+        )
+      });
+
+      marker.setStyle(new ol.style.Style({
+            image: new ol.style.Icon(({
+                //color: '#ffcd46',
+                crossOrigin: 'anonymous',
+                src: 'https://img.icons8.com/color/48/000000/hornet.png'
+            }))
+      }));
+      vectorSource.addFeature(marker);
+
+    }
+   var markerVectorLayer = new ol.layer.Vector({
+      source: vectorSource,
+      updateWhileAnimating: true,
+      updateWhileInteracting: true,
+    });
+    map.addLayer(markerVectorLayer);
+    </script>
   </body>
 </html>

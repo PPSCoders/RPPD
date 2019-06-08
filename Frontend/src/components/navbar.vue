@@ -1,36 +1,73 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <button class="navbar-toggler navbar-toggler-right"
-        type="button" data-toggle="collapse"
-        data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contacts">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#faq">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <button type="button" class="btn btn-primary">Login</button>
-            </li>
-            <li class="nav-item"></li>
-            </ul>
-        </div>
-      </div>
-    </nav>
+  <div>
+    <v-navigation-drawer v-model="sidebar" app>
+      <v-list>
+        <v-list-tile
+          v-for="item in menuItems"
+          :key="item.title"
+          :to="item.path">
+          <v-list-tile-action>
+            <!-- <v-icon>{{ item.icon }}</v-icon> -->
+          </v-list-tile-action>
+          <v-list-tile-content>{{ item.title }}</v-list-tile-content>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app>
+      <span class="hidden-sm-and-up">
+        <v-toolbar-side-icon @click="sidebar = !sidebar">
+        </v-toolbar-side-icon>
+      </span>
+        <v-img 
+          :src="require('@/assets/Blogo.png')"
+          max-height ="60px"
+          max-width="60px"
+          min-height ="40px"
+          min-width="60px">
+        </v-img>
+      <v-toolbar-title>
+        <router-link to="/" tag="span" style="cursor: pointer">
+          {{ appTitle }}
+        </router-link>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items class="hidden-xs-only">
+        <v-btn
+          flat
+          v-for="item in menuItems"
+          :key="item.title"
+          :to="item.path">
+          <!-- <v-icon left dark>{{ item.icon }}</v-icon> -->
+          {{ item.title }}
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+  </div>
+
 </template>
 
 <script>
-export default {
+//import HelloWorld from "./components/HelloWorld";
 
+export default {
+  name: "App",
+  data(){
+    return {
+      appTitle: 'Regulated Plant Pest and Diseases of Bhutan',
+      sidebar: false,
+      menuItems: [
+          // { title: 'Home', path: '/home', icon: 'home' },
+          // { title: 'Sign Up', path: '/signup', icon: 'face' },
+          // { title: 'Sign In', path: '/signin', icon: 'lock_open' }
+          { title: 'Home', path: '/'},
+          { title: 'Search', path: '/search'},
+          { title: 'FAQ', path: '/faq'},
+          { title: 'Login', path: '/login'},
+     ]
+    }
+  },
 };
 </script>
+<style>
+
+</style>

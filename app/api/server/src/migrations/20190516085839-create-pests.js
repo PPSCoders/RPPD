@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       host: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       biology: {
         type: Sequelize.TEXT
@@ -28,7 +28,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       distribution: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       spreadmeans: {
         type: Sequelize.TEXT

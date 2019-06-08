@@ -5,6 +5,8 @@ import App from './App';
 import router from './router';
 import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css';
+import './assets/js/custom.js';
+import './assets/css/custom.css';
 
 Vue.config.productionTip = false;
 
