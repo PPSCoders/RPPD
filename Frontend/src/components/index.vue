@@ -2,7 +2,7 @@
   <v-container grid-list-md text-xs-left>
     <v-layout row wrap sytle="backgroud: grey">
       <v-flex xs12>
-        <h1 class="text-xs-left green--text">Welcome to the Regulated Plants Pests and Diseases Database</h1><br>
+        <!-- <h1 class="text-xs-left green--text">Welcome to the Regulated Plants Pests and Diseases Database</h1><br> -->
       </v-flex>
       <!-- <v-flex xs12 class="text-xs-center">
        <img class="img-fluid rounded" src="static/field.jpg" alt="pests">
@@ -32,9 +32,9 @@
         </ul>
       </v-flex>
       <v-flex xs9 >
-        <h2  class="blue--text">Qurantine Pests and Diseases</h2><br>
+        <h2  class="blue--text">Regulated Plant Pests and Diseases</h2><br>
         
-        <h3>Objectives and Scope of Plant Qurantine Pests Database (PQPD)</h3>
+        <h3>Objectives and Scope of Regulated Plant Pests and Diseases Database (PQPD)</h3>
          <p>The Biosecurity Policy of the Kingdom of Bhutan 20 I 0 designates BAFRA as the National Competent Authority to coordinate all the biosecurity related activities in Bhutan. And for strengthening the plant biosecurity measures in the country, one essentialcompetent is to maintain the Plant Quarantine Pest Database. Such database not only serves the purpose for information exchange among various stakeholders, but also to assist movement of plants and planting materials between Bhutan and outside world. It will help to enhance trade in plant and planting materials and make it safe for agricultural development mainly by ensuring that serious pests, diseases and weeds are not introduced to pest free areas, and also export such problems to other countries are prevented.<span id="dots">...</span></p>
          <span id="more">
          <p>The primary aim of this database is to assist Plant Quarantine Inspectors with pests, diseases, and weeds information to improve their knowledge and make them more effective and efficient to implement tasks of plants and planting materials inspection at the point of entry and in the areas where internal quarantine measures are implemented. In addition, it is also expected to serve as a data repository wherein hosts of emerging or potential plant quarantine pests, diseases and weeds information can be updated and made available as and when necessary by the National Plant Protection Organization.</p>

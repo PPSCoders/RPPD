@@ -37,10 +37,10 @@ export default new Router({
       component: login,
     },
     {
-      path: '/page',
+      path: '/page/:id',
       name: 'page',
       component: page,
-      // props: true,
+      props: true,
     },
   ],
 });

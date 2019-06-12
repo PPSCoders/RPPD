@@ -21,9 +21,9 @@
             :pagination.sync="pagination"
             class="elevation-1">
             <template v-slot:items="props">
-              <!-- <tr @click="showAlert(props.item)"> -->
+              <!-- <tr @click="showAlert()"> -->
               <!-- <router-link to="{name: 'page',params:{prop.item.id}}" tag="tr" style="cursor: pointer">  -->
-              <router-link to="/page" tag="tr" style="cursor: pointer"> 
+              <router-link :to="{name:'page', params:{id: props.item.id}}" tag="tr" style="cursor: pointer"> 
               <td>{{ props.item.name }}</td>
               <td class="text-xs-left">{{ props.item.scientificname }}</td>
               <td class="text-xs-left">{{ props.item.casualorganism }}</td>
@@ -33,7 +33,6 @@
             </template>
           </v-data-table>
         </v-flex>
-      
     </v-layout>
   </v-container>
 </template>
@@ -41,13 +40,13 @@
 <script>
 import database from '@/services/database'
   export default {
-    methods: {
-      showAlert(a){
-        // if (event.target.classList.contains('btn__content')) return;
-        // alert('Alert! \n' + a.name);`
-        console.log("testing success");
-      }
-    },
+    // methods: {
+    //   showAlert(a){
+    //     if (event.target.classList.contains('btn__content')) return;
+    //     alert('Alert! \n' + a.name);
+    //     // console.log("testing success");
+    //   }
+    // },
     data () {
       return {
         search:'',
@@ -68,15 +67,15 @@ import database from '@/services/database'
       this.getGist();
     },
     methods: {
-        async getGist(){
-            try{
-                const res=await database.getGist()
-                this.pests=res.data.data
-                console.log('test')
-            }catch(error){
-                console.log(error);
-            }
-        }
+      async getGist(){  
+          try{
+              const res=await database.getGist()
+              this.pests=res.data.data
+              console.log("testing")
+          }catch(error){
+              console.log(error);
+          } 
+      }
     },
   }
 </script>

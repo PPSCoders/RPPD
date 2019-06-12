@@ -13,7 +13,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar app>
+    <v-toolbar dark color= "#09334f" app>
       <span class="hidden-sm-and-up">
         <v-toolbar-side-icon @click="sidebar = !sidebar">
         </v-toolbar-side-icon>
@@ -53,7 +53,7 @@ export default {
   name: "App",
   data(){
     return {
-      appTitle: 'Regulated Plant Pest and Diseases of Bhutan',
+      appTitle: 'Regulated Plant Pests and Diseases of Bhutan',
       sidebar: false,
       menuItems: [
           // { title: 'Home', path: '/home', icon: 'home' },
