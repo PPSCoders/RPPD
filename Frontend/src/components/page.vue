@@ -3,61 +3,64 @@
     <v-layout row wrap>
       <div id="detailContainer" class="container bg-light" style="padding-left: 50px;padding-right: 50px; padding-top: 30px">
     
-    <h1 id="pest_name" class="text-secondary"><b>{{name}}</b></h1>
-    <br>
+        <h1 id="pest_name" class="text-secondary"><b>{{name}}</b></h1>
+        <br>
 
-    <h3 id="scientificname">Scientific Name</h3>
-    <p>{{scientificname}}</p>
-    <br><br>
+        <h3 id="scientificname">Scientific Name</h3>
+        <p>{{scientificname}}</p>
+        <br><br>
 
-    <h3 id="casualorganism">Casual Organism</h3>
-    <p>{{casualorganism}}</p>
-    <br><br>
+        <h3 id="casualorganism">Casual Organism</h3>
+        <p>{{casualorganism}}</p>
+        <br><br>
 
-    <h3 id="host">Hosts</h3>
-    <p>{{host}}</p>
-    <br><br>
+        <h3 id="host">Hosts</h3>
+        <p>{{host}}</p>
+        <br><br>
 
-    <h3 id="biology">Biology</h3>
-    <p>{{biology}}</p>
-    <br><br>
+        <h3 id="biology">Biology</h3>
+        <p>{{biology}}</p>
+        <br><br>
 
-    <h3 id="symptoms">Symptoms</h3>
-    <p>{{symptoms}}</p>
-    <br><br>
-    
-    <h3 id="distribution">Distribution</h3>
-    <p>{{distribution}}</p>
-    <br><br>
+        <h3 id="distribution">Distribution</h3>
+        <p>{{distribution}}</p>
+        <br><br>
 
-    <h3 id="spreadmeans">Means of Spread</h3>
-    <p>{{spreadmeans}}</p>
-    <br><br>
+        <h3 id="symptoms">Symptoms</h3>
+        <p>{{symptoms}}</p>
+        <br><br>
 
-    <h3 id="phytosanitaryrisk">Phytosanitary Risks</h3>
-    <p>{{phytosanitaryrisk}}</p>
-    <br><br>
+        <h3 id="spreadmeans">Means of Spread</h3>
+        <p>{{spreadmeans}}</p>
+        <br><br>
 
-    <h3 id="phytosanitarymeasures">Phytosanitary Measures</h3>
-    <p>{{phytosanitarymeasures}}</p>
-    <br><br>
-    
+        <h3 id="phytosanitaryrisk">Phytosanitary Risks</h3>
+        <p>{{phytosanitaryrisk}}</p>
+        <br><br>
 
-    <!-- section displaying the maps -->
-    <div id="map" class="map"></div>  
+        <h3 id="phytosanitarymeasures">Phytosanitary Measures</h3>
+        <p>{{phytosanitarymeasures}}</p>
+        <br><br>
 
-
-  </div>    
-    
+        <!-- section displaying the maps -->
+        <!-- <div id="map" class="map"></div>   -->
+      </div>
+      <v-flex xs12 >
+        <distmap/>
+      </v-flex>
     </v-layout>
   </v-container>
 </template>
 <script>
 import database from '@/services/database'
+import distmap from '@/components/distmap.vue';
 
 export default {
   name:'page',
   props:['id'],
+  components:{
+    distmap,
+  },
   data() {
     return{
       pests:[],

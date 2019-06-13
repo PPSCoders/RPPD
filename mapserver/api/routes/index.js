@@ -9,8 +9,18 @@ router.get('/time',async (req,res)=>{
 	const result=await database.queryTime();
 	res.send(result);
 });
-router.get('/location',async(req,res)=>{
-	const result=await database.getdzongkhag();
-	res.send(result);
+router.get('/dzo',async(req,res)=>{
+	var result=await database.getdzongkhag();
+	if(result.length===0){
+		res.send("dzongkhag d=boundaries not found");
+	}else{
+		const boundaries=result.map((row)=>{
+			let geojson=JSON.parse(row.st_asgeojson);
+			return geojson;
+		});
+		console.log("sent the data");
+		res.send(boundaries);
+
+	}
 });
 module.exports=router;

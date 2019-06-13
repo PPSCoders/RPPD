@@ -15,7 +15,7 @@ module.exports={
 		return result.rows[0];
 	},
 	getdzongkhag: async()=>{
-		const locationquery=`select name, ST_AsGeoJSON(geom) from bhutan_simplified;`;
+		const locationquery=`select ST_AsGeoJSON(geom) from bhutan_simplified;`;
 		const result=await client.query(locationquery);
 		return result.rows;
 	}

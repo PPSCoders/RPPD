@@ -19,7 +19,7 @@
             :search="search"
             :rows-per-page-items="rowsPerPageItems"
             :pagination.sync="pagination"
-            class="elevation-1">
+            class="elevation-1" >
             <template v-slot:items="props">
               <!-- <tr @click="showAlert()"> -->
               <!-- <router-link to="{name: 'page',params:{prop.item.id}}" tag="tr" style="cursor: pointer">  -->
@@ -57,7 +57,7 @@ import database from '@/services/database'
         headers: [
           {text: 'Name',value: 'name'},
           { text: 'Scientific Name', value: 'scientificname' },
-          { text: 'Casual Organism', value: 'casualorganism' },
+          { text: 'Causal Organism', value: 'casualorganism' },
           { text: 'Host', value: 'host' },
         ],
         pests:[],

@@ -11,13 +11,15 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
+    "leaflet": "^1.5.1",
     "nodemon": "^1.19.1",
     "popper.js": "^1.15.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue2-leaflet": "^2.1.1",
     "vuetify": "^1.5.14"
   },
   "devDependencies": {
