@@ -13,15 +13,15 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar dark color= "#09334f" app>
+    <v-toolbar dark color= "#343a40" app>
       <span class="hidden-sm-and-up">
         <v-toolbar-side-icon @click="sidebar = !sidebar">
         </v-toolbar-side-icon>
       </span>
         <v-img 
           :src="require('@/assets/Blogo.png')"
-          max-height ="60px"
-          max-width="60px"
+          max-height ="80px"
+          max-width="80px"
           min-height ="40px"
           min-width="60px">
         </v-img>

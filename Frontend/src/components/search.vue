@@ -1,12 +1,16 @@
 <template>
-  <v-container grid-list-md text-xs-left>
+  <v-container grid-list-md>
       <v-layout row wrap>
-        <v-flex xs12 sm6 md3>
+        <v-flex xs12>
+          <h2>Regulated Plant Pests and Diseases Table</h2>
+        </v-flex>
+        <hr>
+        <v-flex xs12 text-xs-right>
           <v-text-field
-          class="text-xs-center"
+            class="text-xs-right"
             v-model="search"
             append-icon="search"
-            label="Search"
+            label="Search pests, diseases or hosts"
             single-line
             hide-details
             outline

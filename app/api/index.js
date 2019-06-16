@@ -5,6 +5,7 @@ import express from 'express';
 import bodyparser from 'body-parser';
 import config from 'dotenv';
 import pestRoutes from './server/routes/pestRoutes';
+import commentsroute from './server/routes/commentRoute';
 
 config.config();
 
@@ -17,6 +18,7 @@ app.use(bodyparser.urlencoded({extended:false}));
 const port = process.env.PORT || 8000;
 
 app.use('/api/v1/pests',pestRoutes);
+app.use('/api/v1/comments',commentsroute);
 
 app.get('*',(req,res)=>{
 	

@@ -1,12 +1,14 @@
 <template>
   <v-container grid-list-md text-xs-left>
-    <v-layout row wrap sytle="backgroud: grey">
+
+    <v-layout row wrap style="backgroud: blue">
       <v-flex xs12>
         <!-- <h1 class="text-xs-left green--text">Welcome to the Regulated Plants Pests and Diseases Database</h1><br> -->
       </v-flex>
       <!-- <v-flex xs12 class="text-xs-center">
        <img class="img-fluid rounded" src="static/field.jpg" alt="pests">
       </v-flex> -->
+
       <v-flex xs3>
         <h2 class="blue--text">Pests and Diseases</h2>
         <br>
@@ -45,7 +47,6 @@
       <v-flex xs12 >
         <faq/>
       </v-flex>
-      
     </v-layout>
   </v-container>
 </template>
@@ -56,5 +57,10 @@ export default {
   components: {
     faq,
   },
+  data(){
+    return{
+      bgimage: "static/field.jpg",
+    }
+  }
 };
 </script>

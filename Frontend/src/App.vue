@@ -3,15 +3,18 @@
     <navbar/>
     <br><br><br><br>
     <router-view/>
+    <contacts/>
   </v-app>
 </template>
 
 <script>
 import navbar from '@/components/navbar.vue';
+import contacts from '@/components/contacts.vue';
 export default {
   name: 'App',
   components: {
     navbar,
+    contacts,
   },
 };
 </script>

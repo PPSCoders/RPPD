@@ -5,12 +5,14 @@
     
         <h1 id="pest_name" class="text-secondary"><b>{{name}}</b></h1>
         <br>
+        <div v-if="scientificname">
+          <h3 id="scientificname">Scientific Name</h3>
+          <p>{{scientificname}}</p>
+        </div>
 
-        <h3 id="scientificname">Scientific Name</h3>
-        <p>{{scientificname}}</p>
         <br><br>
 
-        <h3 id="casualorganism">Casual Organism</h3>
+        <h3 id="casualorganism">Causal Organism</h3>
         <p>{{casualorganism}}</p>
         <br><br>
 
@@ -25,6 +27,22 @@
         <h3 id="distribution">Distribution</h3>
         <p>{{distribution}}</p>
         <br><br>
+
+        <v-flex xs6>
+          <v-img 
+          :src="require('@/assets/picture1.jpg')"
+          min-height ="40px"
+          min-width="60px">
+        </v-img>
+        </v-flex>
+        
+        <v-flex xs6>
+          <v-img 
+          :src="require('@/assets/picture2.jpg')"
+          min-height ="40px"
+          min-width="60px">
+        </v-img>
+        </v-flex>
 
         <h3 id="symptoms">Symptoms</h3>
         <p>{{symptoms}}</p>
@@ -45,6 +63,7 @@
         <!-- section displaying the maps -->
         <!-- <div id="map" class="map"></div>   -->
       </div>
+      
       <v-flex xs12 >
         <distmap/>
       </v-flex>
